@@ -1,0 +1,264 @@
+:root {
+    --Premier-Color: #F9F7F7;
+    --Light-Blue-Color: #DBE2EF;
+    --Blue-Color: #0177FC;
+    --Dark-Blue-Color: #112D4E;
+    --font-oswald: "Oswald",
+        sans-serif;
+}
+
+/* header */
+header {
+    height: 70px;
+}
+
+header h1 {
+    font-family: var(--font-oswald);
+}
+
+header .head {
+    height: 100%;
+}
+
+header ul li a {
+    font-size: 20px;
+    color: black;
+    position: relative;
+}
+
+header ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #0077B5;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    color: var(--Blue-Color);
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+
+header ul li:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+/* header */
+
+/* body */
+.content {
+    width: 100%;
+    height: calc(100vh - 70px);
+    padding-top: 5px;
+}
+
+/* main-sec */
+
+
+.main-sec h2 {
+    font-size: 5rem;
+}
+
+
+.main-sec ul li:not(:last-of-type) {
+    margin-right: 5px;
+}
+
+.main-sec .img img {
+    width: 400px;
+}
+
+/* main-sec */
+/* second-sec */
+
+.second-sec {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
+}
+
+.second-sec .card {
+    width: 250px;
+    height: 350px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.second-sec .card:hover {
+    transform: scale(1.1);
+}
+
+.second-sec .card .img {
+    width: 250px;
+    height: 50%;
+    padding: 0 15px;
+}
+
+.second-sec .card .img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.second-sec .card .data h2 {
+    font-family: var(--font-oswald);
+}
+
+.skiper {
+    font-family: Oswald, sans-serif;
+    border: 1px solid #eee;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+/* second-sec */
+/* Skills */
+.skillsContainer {
+    width: 30%;
+}
+
+.skill .progress {
+    height: 30px;
+    background: var(--Light-Blue-Color);
+}
+
+.skill .progress span {
+    width: 90%;
+    height: 100%;
+    display: block;
+    background-color: var(--Blue-Color);
+    position: relative;
+}
+
+.skill .progress span::before {
+    content: attr(data-progress);
+    position: absolute;
+    padding: 3px;
+    top: -30px;
+    right: -23px;
+    width: 50px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--Dark-Blue-Color);
+    color: white;
+}
+
+.skill .progress span::after {
+    content: "";
+    position: absolute;
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--Dark-Blue-Color) transparent transparent transparent;
+    top: -5px;
+    right: -6px;
+}
+
+.skills img {
+    width: 400px;
+}
+
+/* Skills */
+/* Projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
+}
+
+.projects a {
+    display: block;
+    width: fit-content;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.projects a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    transition: 0.3s;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.projects a:hover::after {
+    top: 0;
+}
+
+.projects a img {
+    width: 250px;
+}
+
+.projects a .data {
+    transition: 0.3s;
+}
+
+.projects a:hover .data {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+}
+
+/* Projects */
+/* Contact */
+.contanct .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contanct .card .icon {
+    width: 75px;
+    height: 75px;
+    border: 2px var(--Dark-Blue-Color);
+    border-style: dashed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Blue-Color);
+    font-size: 40px;
+}
+
+/* Contact */
+/* Footer */
+footer {
+    height: 50px;
+}
+
+
+/* Footer */
+/* body */
+
+/* media */
+@media(max-width : 768px) {
+    .main-sec .img img {
+        width: 300px;
+    }
+
+    .skillsContainer {
+        width: 100%;
+    }
+
+    .skills img {
+        display: none;
+    }
+}
+
+/* media */
